@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/css_header.css">
+    <link rel="stylesheet" href="css/css_contain.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,100&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/074fbb8e37.js" crossorigin="anonymous"></script>
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <header class="head-main">
+        <nav class="head-main-menu">
+            <div class="head-logo">
+                <a href="http://127.0.0.1:5500/index.html">
+                    <img width="152" height="55" src="/Arquivos/imagens/logo_senhaForte.png">
+                </a>
+            </div>
+            <nav class="head-nav">
+                <a class="mouse-pointer">Home</a>
+                <a class="mouse-pointer">Artigos</a>
+                <a class="mouse-pointer">Eventos</a>
+                <a class="mouse-pointer">Download</a>
+                <a class="mouse-pointer">Contato</a>
+            </nav>
+            <div class="head-search">
+                <form role="search" method="get" class="search-form">
+
+                    <input type="search" class="search-field form-control form-control-sm" placeholder="Search …"
+                        value="" name="s" title="Search for:">
+
+                    <i class="fa fa-search search-icon mouse-pointer" aria-hidden="true"></i>
+                </form>
+            </div>
+
+
+            <div class="login-box">
+                <div id="head-login" class="head-login mouse-pointer">
+                    <i class="fa fa-2x fa-user login-icon" aria-hidden="true"></i>
+                    <i class="fa  fa-ax fa-chevron-down login-icon" aria-hidden="true"></i>
+                </div>
+                <div class="head-login-hidden">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label class="lbl-form" for="usuario">Login</label>
+                            <input class="input-form form-control" type="text" name="usuario" required="">
+                        </div>
+                        <div class="form-group">
+                            <label class="lbl-form" for="senha">Senha</label>
+                            <input class="input-form form-control" type="password" name="senha" autocomplete="off"
+                                required="">
+                            <div><a class="lembrar-senha login-hidden-elemts" href="">Esqueceu o login ou a senha?</a>
+                            </div>
+                        </div>
+                        <div class="form-group login-hidden-elemts">
+                            <button class="submit-form btn btn-primary" type="submit">Entrar</button>
+                            <div class="cadastro"><a href="">Cadastre-se</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script>
+                $(document).on("click", ".head-login", function () {
+                    $(".head-login-hidden").toggleClass('head-login-show');
+                    $(".head-login").toggleClass('active-head-login');
+                });
+            </script>
+        </nav>
+    </header>
+    <div class=" wrapper">
+        <section class="up-contain-main">
+            <div class="up-contain-head">
+                <p>Lorem, ipsum.</p>
+            </div>
+            <div class="up-contain-block">
+                <div class="up-contain-call">
+                    <span class="up-contain-new">NOVO!</span>
+                    <span class="up-contain-data"> 08 de março de 2023</span>
+                </div>
+                <p class="up-contain-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, quaerat?
+                    Nemo blanditiis nobis amet molestias.</p>
+                <p class="up-contain-autor">Por "Autor".</p>
+                <p class="up-contain-resumo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error expedita
+                    sunt
+                    eos voluptatum asperiores enim. Reprehenderit impedit iure mollitia. Dolores.</p>
+            </div>
+            <div class="up-contain-block">
+                <div class="up-contain-call">
+                    <span class="up-contain-new">NOVO!</span>
+                    <span class="up-contain-data"> 08 de março de 2023</span>
+                </div>
+                <p class="up-contain-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, quaerat?
+                    Nemo blanditiis nobis amet molestias.</p>
+                <p class="up-contain-autor">Por "Autor".</p>
+                <p class="up-contain-resumo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error expedita
+                    sunt
+                    eos voluptatum asperiores enim. Reprehenderit impedit iure mollitia. Dolores.</p>
+            </div>
+        </section>
+        <hr>
+        <div class="container wrapper-middle">
+            <p class="wrapper-middle-title">Mais de XXXXXXXXXX</p>
+            <div class="row">
+                <section class="col-9 list-articles container">
+                    <div class="row">
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="list-articles-autor">Por "Autor".</p>
+                            <p class="list-articles-resumo">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Eveniet totam fugiat nulla distinctio beatae perferendis placeat officia, asperiores
+                                harum velit optio quae vitae error animi accusamus inventore qui. Quod voluptates, ipsum
+                                deleniti modi libero sint nulla nihil delectus accusantium reprehenderit omnis dolorem
+                                minima, aperiam voluptatum!</p>
+                            <p class="list-articles-data">20 de fevereiro de 2023</p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="list-articles-autor">Por "Autor".</p>
+                            <p class="list-articles-resumo">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Eveniet totam fugiat nulla distinctio beatae perferendis placeat officia, asperiores
+                                harum velit optio quae vitae error animi accusamus inventore qui. Quod voluptates, ipsum
+                                deleniti modi libero sint nulla nihil delectus accusantium reprehenderit omnis dolorem
+                                minima, aperiam voluptatum!</p>
+                            <p class="list-articles-data">20 de fevereiro de 2023</p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="list-articles-autor">Por "Autor".</p>
+                            <p class="list-articles-resumo">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Eveniet totam fugiat nulla distinctio beatae perferendis placeat officia, asperiores
+                                harum velit optio quae vitae error animi accusamus inventore qui. Quod voluptates, ipsum
+                                deleniti modi libero sint nulla nihil delectus accusantium reprehenderit omnis dolorem
+                                minima, aperiam voluptatum!</p>
+                            <p class="list-articles-data">20 de fevereiro de 2023</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="list-articles-autor">Por "Autor".</p>
+                            <p class="list-articles-resumo">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Eveniet totam fugiat nulla distinctio beatae perferendis placeat officia, asperiores
+                                harum velit optio quae vitae error animi accusamus inventore qui. Quod voluptates, ipsum
+                                deleniti modi libero sint nulla nihil delectus accusantium reprehenderit omnis dolorem
+                                minima, aperiam voluptatum!</p>
+                            <p class="list-articles-data">20 de fevereiro de 2023</p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="list-articles-autor">Por "Autor".</p>
+                            <p class="list-articles-resumo">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Eveniet totam fugiat nulla distinctio beatae perferendis placeat officia, asperiores
+                                harum velit optio quae vitae error animi accusamus inventore qui. Quod voluptates, ipsum
+                                deleniti modi libero sint nulla nihil delectus accusantium reprehenderit omnis dolorem
+                                minima, aperiam voluptatum!</p>
+                            <p class="list-articles-data">20 de fevereiro de 2023</p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="list-articles-autor">Por "Autor".</p>
+                            <p class="list-articles-resumo">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Eveniet totam fugiat nulla distinctio beatae perferendis placeat officia, asperiores
+                                harum velit optio quae vitae error animi accusamus inventore qui. Quod voluptates, ipsum
+                                deleniti modi libero sint nulla nihil delectus accusantium reprehenderit omnis dolorem
+                                minima, aperiam voluptatum!</p>
+                            <p class="list-articles-data">20 de fevereiro de 2023</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="list-articles-autor">Por "Autor".</p>
+                            <p class="list-articles-resumo">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Eveniet totam fugiat nulla distinctio beatae perferendis placeat officia, asperiores
+                                harum velit optio quae vitae error animi accusamus inventore qui. Quod voluptates, ipsum
+                                deleniti modi libero sint nulla nihil delectus accusantium reprehenderit omnis dolorem
+                                minima, aperiam voluptatum!</p>
+                            <p class="list-articles-data">20 de fevereiro de 2023</p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="list-articles-autor">Por "Autor".</p>
+                            <p class="list-articles-resumo">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Eveniet totam fugiat nulla distinctio beatae perferendis placeat officia, asperiores
+                                harum velit optio quae vitae error animi accusamus inventore qui. Quod voluptates, ipsum
+                                deleniti modi libero sint nulla nihil delectus accusantium reprehenderit omnis dolorem
+                                minima, aperiam voluptatum!</p>
+                            <p class="list-articles-data">20 de fevereiro de 2023</p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="list-articles-autor">Por "Autor".</p>
+                            <p class="list-articles-resumo">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Eveniet totam fugiat nulla distinctio beatae perferendis placeat officia, asperiores
+                                harum velit optio quae vitae error animi accusamus inventore qui. Quod voluptates, ipsum
+                                deleniti modi libero sint nulla nihil delectus accusantium reprehenderit omnis dolorem
+                                minima, aperiam voluptatum!</p>
+                            <p class="list-articles-data">20 de fevereiro de 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="down-buttom-page">
+                        <button class="btn btn-primary">Anterior</button>
+                        <button class="btn btn-primary">1</button>
+                        <button class="btn btn-primary">2</button>
+                        <button class="btn btn-primary">3</button>
+                        <button class="btn btn-primary">Próximo</button>
+                    </div>
+                </section>
+                <aside class="col list-topics">
+                    <div class="list-topics-head">
+                        <p>Tópicos</p>
+                    </div>
+                    <div class="list-topics-block">
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Código</span>
+                            <div class="list-topics-content">
+                                <li><a>Desenvolvimento de aplicações</a></li>
+                                <li><a>Navegadores</a></li>
+                                <li><a>CSS</a></li>
+                                <li><a>HTML</a></li>
+                                <li><a>JavaScript</a></li>
+                                <li><a>O lado do servidor</a></li>
+                            </div>
+                        </div>
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Projeto</span>
+                            <div class="list-topics-content">
+                                <li>Identidade da marca</li>
+                                <li>Design gráfico</li>
+                                <li>Layout e grades</li>
+                                <li>Dispositivo móvel</li>
+                                <li>Design Responsivo</li>
+                                <li>Tipografia e fontes da Web</li>
+                            </div>
+                        </div>
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Indústria e Negócios</span>
+                            <div class="list-topics-content">
+                                <li>Negócios</li>
+                                <li>Carreira</li>
+                                <li>Indústria</li>
+                                <li>Estado da web</li>
+                            </div>
+                        </div>
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Processo</span>
+                            <div class="list-topics-content">
+                                <li>Criatividade</li>
+                                <li>Gerenciamento de projetos</li>
+                                <li>Estratégia Web</li>
+                                <li>Fluxo de trabalho e ferramentas</li>
+                            </div>
+                        </div>
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Experiência do usuário</span>
+                            <div class="list-topics-content">
+                                <li>Acessibilidade</li>
+                                <li>Arquitetura de informação</li>
+                                <li>Design de interação</li>
+                                <li>Usabilidade</li>
+                                <li>Pesquisa do usuário</li>
+                            </div>
+                        </div>
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Contente</span>
+                            <div class="list-topics-content">
+                                <li>Comunidade</li>
+                                <li>Estratégia de conteúdo</li>
+                                <li>Escrita</li>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <section class="down-contain">
+            <span class="sbc-newsl">Receba nossos artigos mais recentes em sua caixa de entrada. Inscreva-se para receber
+                alertas por e-mail.</span>
+            <i class="fa fa-hand-pointer-o mouse-pointer" aria-hidden="true"></i>
+        </section>
+    </div>
+
+    <footer class="footer-main">
+        <div class="footer-content container">
+            <div class="row">
+                <div class="footer-text col">
+                    <span>Sobre</span>
+                    <span>Contato</span>
+                    <span>Autores</span>
+                    <span>Política de privacidade</span>
+                </div>           
+                <div class="footer-text col">
+                    <span>Signa-nos nas nossas redes sociais: </span>
+                    <span><i class="fa-brands fa-facebook"></i></span>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                    <span><i class="fa-brands fa-linkedin"></i></span>
+                </div>
+            </div>
+            <div class="copyright">@copy</div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
