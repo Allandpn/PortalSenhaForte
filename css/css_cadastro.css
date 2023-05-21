@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    
+}
+
+
+.content-site {
+    width: 100%;
+    background-color: #ECEFF5;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 1600px;
+}
+
+.signup-section {
+    margin: auto;
+    margin-top: 30px;
+    width: 600px;  
+}
+
+.form-header {       
+    justify-content: center;    
+    display: flex;
+}
+
+.form-header-info {    
+    margin-left: 20px;
+}
+
+.form-header label {
+    font-size: 30px;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.lbl-link {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.lbl-link button {
+    margin-left: 15px;
+}
+
+.signup-container{
+    margin-top: 60px;
+    background-color: rgb(253, 254, 255);          
+    padding: 60px 60px 20px 60px;       
+    align-content: center;
+    box-shadow: 5px 5px 15px 5px rgba(122, 122, 122, 0.1);
+    border-radius: 14px;
+}
+
+.container-align {
+    font-size: 22px;
+}
+
+.group-form {
+    margin-top: 30px;    
+    justify-content: center;
+    text-align: center;
+}
+
+.form-check-main{
+    margin-top: 10px;  
+}
+
+.form-group button {
+    margin-top: 30px;
+    
+}
+
+
+.form-group span {
+    color: rgb(231, 15, 15);
+    margin-left: 2px;
+}
+
+.required {
+    margin-top: 0px;
+    color: rgb(231, 15, 15);
+    font-size: 16px;
+}

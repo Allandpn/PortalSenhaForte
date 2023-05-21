@@ -15,8 +15,7 @@
 
 .head-main {
     background-color: #2455C3;
-    height: 75px;    
-    
+    height: 75px;        
     
 }
 
@@ -38,9 +37,14 @@
 .head-nav {
     margin-left: 30px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
+    font-size: 21px;
     color: aliceblue;
     
+}
+
+.head-nav a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .head-nav a{
@@ -95,6 +99,7 @@
 
 .lembrar-senha {
     font-size: smaller;
+    margin-top: 7px;
 
 }
 

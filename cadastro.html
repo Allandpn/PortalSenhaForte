@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/css_header.css">
+    <link rel="stylesheet" href="css/css_cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,100&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/074fbb8e37.js" crossorigin="anonymous"></script>
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <header class="head-main">
+        <nav class="head-main-menu">
+            <div class="head-logo">
+                <a href="index.html">
+                    <img width="152" height="55" src="/Arquivos/imagens/logo_senhaForte.png">
+                </a>
+            </div>
+            <nav class="head-nav">
+                <a class="mouse-pointer" href="index.html">Home</a>
+                <a class="mouse-pointer">Artigos</a>
+                <a class="mouse-pointer">Eventos</a>
+                <a class="mouse-pointer">Download</a>
+                <a class="mouse-pointer">Contato</a>
+            </nav>
+            <div class="head-search">
+                <form role="search" method="get" class="search-form">
+
+                    <input type="search"
+                        class="search-field form-control form-control-lg form-control form-control-lg-sm"
+                        required placeholder="Search …" value="" name="s" title="Search for:">
+
+                    <i class="fa fa-search search-icon mouse-pointer" aria-hidden="true"></i>
+                </form>
+            </div>
+
+
+            <div class="login-box">
+                <div id="head-login" class="head-login mouse-pointer">
+                    <i class="fa fa-2x fa-user login-icon" aria-hidden="true"></i>
+                    <i class="fa  fa-ax fa-chevron-down login-icon" aria-hidden="true"></i>
+                </div>
+                <div class="head-login-hidden">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label class="lbl-form" for="usuario">Login</label>
+                            <input class="input-form form-control form-control-lg" type="text" name="usuario"
+                                required="">
+                        </div>
+                        <div class="form-group">
+                            <label class="lbl-form" for="senha">Senha</label>
+                            <input class="input-form form-control form-control-lg" type="password" name="senha"
+                                autocomplete="off" required="">
+                            <div><a class="lembrar-senha login-hidden-elemts" href="">Esqueceu o login ou a senha?</a>
+                            </div>
+                        </div>
+                        <div class="form-group login-hidden-elemts">
+                            <button class="submit-form btn btn-primary" type="submit">Entrar</button>
+                            <div class="cadastro"><a href="">Cadastre-se</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script>
+                $(document).on("click", ".head-login", function () {
+                    $(".head-login-hidden").toggleClass('head-login-show');
+                    $(".head-login").toggleClass('active-head-login');
+                });
+            </script>
+        </nav>
+    </header>
+    <section class="content-site">
+        <div class="signup-section">
+            <div class="form-header">
+                <div class="form-header-image">
+                    <img src="./Arquivos/imagens/new-user.svg" height="60px">
+                </div>
+                <div class="form-header-info">
+                    <label>Criar conta</label>
+                    <p>Novo usuário</p>
+                </div>
+            </div>
+            <div class="lbl-link">
+                <span>Já possui conta?</span>
+                <button class="submit-form btn btn-primary" type="submit">Entrar</button>
+            </div>
+
+            <div class="signup-container">
+                <section class="container-login">
+                    <div class="container-align">
+                        <form>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="input-usuario">Nome de Usuário</label>
+                                    <span>*</span>
+                                    <input type="text" class="form-control form-control-lg form-control "
+                                        id="input-usuario" name="input-usuario" required placeholder="Usuário" >                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-name">Nome</label>
+                                    <span>*</span>
+                                    <input type="text" class="form-control form-control-lg" id="input-name"
+                                        name="input-name" required placeholder="Nome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-sobrenome">Sobrenome</label>
+                                    <span>*</span>
+                                    <input type="text" class="form-control form-control-lg" id="input-sobrenome"
+                                        name="input-sobrenome" required placeholder="Sobrenome">
+                                </div>
+                                <div class="form-group ">
+                                    <label for="input-email">Email</label>
+                                    <span>*</span>
+                                    <input type="email" class="form-control form-control-lg" id="input-email"
+                                        name="input-email" required placeholder="Seu email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-password">Senha</label>
+                                    <span>*</span>
+                                    <input type="password" class="form-control form-control-lg" id="input-password"
+                                        name="input-password" required placeholder="Senha">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="input-natanascimento">Data de nascimento</label>
+                                    <span>*</span>
+                                    <input type="date" name="input-natanascimento" class="form-control form-control-lg"
+                                        id="input-natanascimento" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-ddd">Telefone</label>
+                                    <span>*</span>
+                                    <div class="row">
+                                        <div class="col 3">
+                                            <input type="text" class="form-control form-control-lg" id="input-ddd"
+                                                name="input-ddd" required placeholder="DDD">
+                                        </div>
+                                        <div class="col-9">
+                                            <input type="text" class="form-control form-control-lg" id="input-telefone"
+                                                name="input-telefone" required placeholder="Telefone">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select-pais">País</label>
+                                    <span>*</span>
+                                    <select class="form-control form-control-lg" id="select-pais" name="select-pais">
+                                        <option>Brasil</option>
+                                        <option>Estados Unidos</option>
+                                        <option>Alemanha</option>
+                                        <option>Japão</option>
+                                        <option>Holanda</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select-idioma">Idioma de Preferência</label>
+                                    <span>*</span>
+                                    <select class="form-control form-control-lg" id="select-idioma"
+                                        name="select-idioma">
+                                        <option>Português</option>
+                                        <option>Inglês</option>
+                                        <option>Alemão</option>
+                                        <option>Japonês</option>
+                                        <option>Espanhol</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <span class="required">* Campo Obrigatório</span>
+                            <div class="form-check form-check-main">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Li e concordo com os termos da <a href="http://127.0.0.1:5500/index.html">política
+                                        de privacidade</a>
+                                </label>                                
+                            </div>
+
+                            <div class="form-group group-form">
+
+                                <div class="form-group">
+                                    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                        data-callback="verifyRecaptchaCallback"
+                                        data-expired-callback="expiredRecaptchaCallback"></div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="submit-form btn btn-lg btn-primary " type="submit">Cadastrar</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
