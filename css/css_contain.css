@@ -2,6 +2,8 @@
 
 .wrapper {
     padding: 40px 80px 80px 80px;
+    max-width: 1400px;
+    margin: auto;
 }
 
 .up-contain-main {
