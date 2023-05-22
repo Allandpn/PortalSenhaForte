@@ -62,13 +62,35 @@
 
 /*Define estilo Grid de assuntos */
 
-.wrapper-middle-title {
-    text-align: center;
-    font-size: 27px;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 30px;
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
 }
+
+.wrapper-middle-title {
+    
+    text-align: left;
+    font-size: 27px;
+   
+    margin-top: 50px;  
+}
+
+.wrapper-middle-title span {
+    background-color: #EBEBEB;    
+    text-align: center;
+    padding: 4px 8px 4px;
+    border-radius: 5px;
+  
+
+}
+
+.list-articles hr {
+    background-color: #EBEBEB;      
+    margin-top: 0px;
+    margin-bottom: 40px;
+
+}
+
 
 .list-articles-title {
     text-align: left;
