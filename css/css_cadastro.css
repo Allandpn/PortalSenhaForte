@@ -15,7 +15,7 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    height: 1600px;
+    height: 1800px;
 }
 
 .signup-section {
@@ -23,6 +23,19 @@
     margin-top: 30px;
     width: 600px;  
 }
+
+.signup-container {
+    
+}
+
+.mensage-sucess {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 35px;
+    color: rgb(17, 17, 173);
+
+}
+
 
 .form-header {       
     justify-content: center;    
@@ -88,4 +101,21 @@
     margin-top: 0px;
     color: rgb(231, 15, 15);
     font-size: 16px;
+}
+
+.class-hiden {
+    display: none;
+}
+
+.class-show {
+  display: block;
+}
+.text-center {
+    display: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.mensage-sucess-text {
+    display: none;
 }

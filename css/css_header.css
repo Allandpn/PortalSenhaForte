@@ -13,6 +13,8 @@
     min-height: 100vh; 
 }
 
+
+
 .head-main {
     background-color: #2455C3;
     height: 75px;        
@@ -49,12 +51,15 @@
 
 .head-nav a{
     margin-left: 13px;
+    text-decoration: none;
 }
+
+
 
 .head-search {
     
     position: absolute;
-    margin-left: 76%;
+    margin-left: 70%;
 }
 
 .search-form {
@@ -67,15 +72,19 @@
     color: rgb(105, 157, 202);
 }
 
+
+
 .login-box {
    position: absolute;
-    margin-left: 95%; 
+    margin-left: 92%; 
    
 }
 
 .login-icon{
     color: aliceblue;
 }
+
+
 
 .head-login-hidden {   
     width: 250px; 
@@ -88,6 +97,14 @@
     border-radius: 8px;
 }
 
+.head-login-hidden span {
+    margin-left: 15px;
+}
+
+.head-login-hidden a:hover {
+    text-decoration: none;
+}
+
 .login-hidden-elemts {
     position: relative;
     display:block;    
@@ -96,6 +113,8 @@
     margin-bottom: 0px;
     
 }
+
+
 
 .lembrar-senha {
     font-size: smaller;
