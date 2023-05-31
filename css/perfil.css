@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+
+.header-main-row {
+    background-color: #2455C3;
+    height: 75px;       
+}
+
+.icon-white {
+    color: aliceblue;
+    margin-left: 15px;
+}
+
+
+
+.icon-user {
+    margin-right: 10px;
+}
+
+.head-login-hidden {
+    color: #2455C3;
+}
+
+.wrapper-main {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: center;
+    background-color: #ECEFF5;
+    
+    
+}
+
+.menu-lateral {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;    
+    float: left;
+    
+    text-align: center;
+    box-shadow: 4px 5px 5px 5px #00000013;
+    padding-top: 20px;
+   
+}
+
+.fa-sign-out {
+    margin-top: 700px;
+}
+
+.contain-main {       
+    height: 100vh;    
+    margin: auto;
+    padding: 20px;      
+}
+
+.contain-title {
+    margin-left: -50px;
+    margin-bottom: 50px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.form-user-main {
+    background-color: #ffffff;
+    padding: 0px 15px 20px 40px;
+    border-radius: 9px;
+    box-shadow: 4px 5px 5px 5px #00000013;
+}
+
+.former-header {
+    padding:15px 0px 0px 0px;
+    font-weight: bold; 
+    font-size: 17px;   
+}
+
+.form-user-main hr {
+    margin: 0px 0px 40px 0px;
+}
+
+.informacao-pessoal {
+    margin: 10px 0px 10px 0px;
+    font-weight: bold;
+}
+
+.desalied {
+    margin-top: -2px;
+    padding-top: 0px;
+}
+
+.button-down {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.password-eye {
+    position: absolute;
+    margin-top: -27px;
+    margin-left: 170px;
+    color: #838383;
+}
