@@ -119,3 +119,8 @@
 .mensage-sucess-text {
     display: none;
 }
+
+.submit-form-button {
+    text-align: center;
+    margin-top: 35px;
+}
