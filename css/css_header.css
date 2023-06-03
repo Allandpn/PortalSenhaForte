@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-* { 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,16 +9,17 @@
 .html {
     margin-right: 0px;
 }
-.body {  
-    min-height: 100vh; 
+
+.body {
+    min-height: 100vh;
 }
 
 
 
 .head-main {
     background-color: #2455C3;
-    height: 75px;        
-    
+    height: 75px;
+
 }
 
 .head-main-menu {
@@ -27,13 +28,13 @@
     display: flex;
     align-items: center;
     position: relative;
-    
+
 }
 
 .head-logo {
-    float: left;    
-    margin-left: 10px;   
-   
+    float: left;
+    margin-left: 10px;
+
 }
 
 .head-nav {
@@ -41,7 +42,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 21px;
     color: aliceblue;
-    
+
 }
 
 .head-nav a {
@@ -49,7 +50,7 @@
     text-decoration: none;
 }
 
-.head-nav a{
+.head-nav a {
     margin-left: 13px;
     text-decoration: none;
 }
@@ -57,7 +58,7 @@
 
 
 .head-search {
-    
+
     position: absolute;
     margin-left: 70%;
 }
@@ -75,27 +76,28 @@
 
 
 .login-box {
-   position: absolute;
-    margin-left: 92%; 
-   
+    position: absolute;
+    margin-left: 92%;
+
 }
 
-.login-icon{
+.login-icon {
     color: aliceblue;
 }
 
 
 
-.head-login-hidden {   
-    width: 250px; 
+.head-login-hidden {
+    width: 250px;
     position: absolute;
     margin-top: 30px;
     padding: 10px;
     transform: translate(-80%, 0);
     background-color: rgb(248, 250, 255);
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     border-radius: 8px;
-    color:  #2455C3;;
+    color: #2455C3;
+    
 }
 
 .head-login-hidden span {
@@ -108,11 +110,19 @@
 
 .login-hidden-elemts {
     position: relative;
-    display:block;    
-    text-align: center; 
+    display: block;
+    text-align: center;
     color: rgb(118, 118, 119);
     margin-bottom: 0px;
-    
+
+}
+
+.msg-error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+    display: none;
 }
 
 
@@ -124,19 +134,19 @@
 }
 
 .cadastro {
-    margin-top: 10px;   
+    margin-top: 10px;
     color: rgb(209, 38, 104);
 }
-   
 
 
 
 
-.head-login-hidden{
+
+.head-login-hidden {
     display: none;
 }
 
-.head-login-show{
+.head-login-show {
     display: inline;
 }
 
@@ -144,10 +154,10 @@
     cursor: pointer;
 }
 
-.list-articles-resumo{
+.list-articles-resumo {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.list-articles-title{
+.list-articles-title {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

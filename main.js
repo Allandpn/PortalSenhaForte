@@ -1,34 +1,16 @@
 
-const tempUser = {
-    usuario: "Casa",
-    nome: "Fernando",
-    sobrenome: "Antonio",
-    email: "allandpn@hotmail.com",
-    senha: "12345",
-    senhaconfirma: "12345",
-    data: "08/06/1988",
-    telddd: "49",
-    telnum: "999892939",
-    pais: "Brasil",
-    idioma: "Portugues"
-}
+
 
 const getLocal = () => JSON.parse(localStorage.getItem("db_user")) ?? []
 
 const setLocal = (db_user) => localStorage.setItem("db_user", JSON.stringify(db_user))
 
-
-//CRUD - Create
-const createUser = (user) => {
-    const db_user = getLocal()
-    db_user.push(user)
-    setLocal(db_user)
-}
-
 //CRUD - Read
 const readUser = (index) => {
     const _user = getLocal();
-    const user_r = _user[index];
+    const user = _user[index];
+    return user
+
 }
 
 const updateUser = (index, user) => {
@@ -45,56 +27,87 @@ const deleteUser = (index, user) => {
 
 
 
-//  Formularios
-
-const submitForm = () => {
-    console.log("teste3")
-    $(".signup-container").hide();
-    window.scrollTo(0, 0);
-    setTimeout(() => {
-        $(".text-center").show() 
-    }, 150);
-    setTimeout(() => {
-        $(".text-center").hide();
-    }, 1500);
-    setTimeout(() => {
-        $(".mensage-sucess-text").show();
-    setTimeout(function () {
-        window.location.href = "home_login.html";
-    }, 1000);
-    }, 200);
+const updateTable = () => {
+    console.log("teste")
+    const user = readUser(0)
+    document.getElementById('inputUsername01').value = user.usuario
+    document.getElementById('inputEmail3').value = user.email
+    document.getElementById('inputPassword01').value = user.senha
+    document.getElementById('inputPassword02').value = user.senhaconfirma
+    document.getElementById('inputFirstName01').value = user.nome
+    document.getElementById('inputSobrenome01').value = user.sobrenome
+    document.getElementById('inputDataNasc01').value = user.data
+    document.getElementById('inputTelefone01').value = user.telnum
+    document.getElementById('select-pais').value = user.pais
+    document.getElementById('select-idioma').value = user.idioma
 }
 
 
+
+window.onload = updateTable
+
+
 const isValideFields = () => {
-    return document.getElementById('form-user').reportValidity()
+    return document.getElementById('form-user-update').reportValidity()
+}
+
+const showModal = () => {
+    $('#modalPerfil').modal('show')
 }
 
 
 const cadastrarUser = () => {
-    if (isValideFields()) {
-        const user = {
-            usuario: document.getElementById('input-usuario').value,
-            nome: document.getElementById('input-name').value,
-            sobrenome: document.getElementById('input-sobrenome').value,
-            email: document.getElementById('input-email').value,
-            senha: document.getElementById('input-password').value,
-            senhaconfirma: document.getElementById('input-password-confirm').value,
-            data: document.getElementById('input-natanascimento').value,            
-            telnum: document.getElementById('input-telefone').value,
-            pais: document.getElementById('select-pais').value,
-            idioma: document.getElementById('select-idioma').value
-        }
-
-        createUser(user)        
-        submitForm()        
+    const user = {
+        "usuario": document.getElementById('inputUsername01').value,
+        "nome": document.getElementById('inputFirstName01').value,
+        "sobrenome": document.getElementById('inputSobrenome01').value,
+        "email": document.getElementById('inputEmail3').value,
+        "senha": document.getElementById('inputPassword01').value,
+        "senhaconfirma": document.getElementById('inputPassword02').value,
+        "data": document.getElementById('inputDataNasc01').value,
+        "telnum": document.getElementById('inputTelefone01').value,
+        "pais": document.getElementById('select-pais').value,
+        "idioma": document.getElementById('select-idioma').value
     }
+
+    updateUser(0, user)
+    showModal()
 }
 
 
+document.getElementById("submit-botton-update")
+    .addEventListener('click', cadastrarUser)
 
-// Eventos
-document.getElementById("submit-form-button")
-  .addEventListener('click', cadastrarUser)
+
+
+const togglePassword01 = document
+    .getElementById('password_eye01');
+
+togglePassword01.addEventListener('click', () => {
+    const password = document.querySelector('#inputPassword01');
+    const type = password
+        .getAttribute('type') === 'password' ?
+        'text' : 'password';
+    password.setAttribute('type', type);
+});
+
+const togglePassword02 = document
+    .getElementById('password_eye02');
+
+togglePassword02.addEventListener('click', () => {
+    const password = document.querySelector('#inputPassword02');
+    const type = password
+        .getAttribute('type') === 'password' ?
+        'text' : 'password';
+    password.setAttribute('type', type);
+});
+
+
+
+
+
+
+
+
 
 

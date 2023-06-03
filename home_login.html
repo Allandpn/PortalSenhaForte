@@ -24,12 +24,12 @@
     <header class="head-main">
         <nav class="head-main-menu">
             <div class="head-logo">
-                <a href="index.html">
+                <a href="home_login.html">
                     <img width="152" height="55" src="/Arquivos/imagens/logo_senhaForte.png">
                 </a>
             </div>
             <nav class="head-nav">
-                <a class="mouse-pointer" href="index.html">Home</a>
+                <a class="mouse-pointer" href="home_login.html">Home</a>
                 <a class="mouse-pointer">Artigos</a>
                 <a class="mouse-pointer">Eventos</a>
                 <a class="mouse-pointer">Download</a>
@@ -54,9 +54,16 @@
 
                 <div class="head-login-hidden">
                     <div class="icon_username">
-                        <span></span>
+                        <span id="name_user_db" style="font-weight: bold; margin-left: 0px;">
+                            <script>
+                                const name_user_test = () => {
+                                    const db_user = JSON.parse(localStorage.getItem("db_user"))
+                                    document.getElementById('name_user_db').innerHTML = db_user[0].usuario
+                                }
+                                name_user_test()
+                            </script>
+                        </span>
                     </div>
-
                     <div class="icon-perfil">
                         <a href="">
                             <i class="fa  fa-user login-icon-perfil" aria-hidden="true"></i>
@@ -64,10 +71,10 @@
                         </a>
                     </div>
                     <div class="icon-estatistc">
-                       <a href="">
+                        <a href="">
                             <i class="fa fa-bar-chart" aria-hidden="true"></i>
                             <span>Estatísticas</span>
-                       </a>
+                        </a>
                     </div>
                     <div class="icon-perfil">
                         <a href="">
@@ -380,6 +387,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
 
 </body>
 

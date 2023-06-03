@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/css_header.css">
     <link rel="stylesheet" href="css/css_contain.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +17,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/074fbb8e37.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="imagex/png" href="./Arquivos/imagens/logo.png">
-    
+
     <title>Senha Forte</title>
 </head>
 
@@ -47,28 +48,31 @@
 
 
             <div class="login-box">
+               
                 <div id="head-login" class="head-login mouse-pointer">
                     <i class="fa fa-2x fa-user login-icon" aria-hidden="true"></i>
                     <i class="fa  fa-ax fa-chevron-down login-icon" aria-hidden="true"></i>
                 </div>
                 <div class="head-login-hidden">
-                    <form action="" method="post">
-                        <div class="form-group">
-                            <label class="lbl-form" for="usuario">Login</label>
-                            <input class="input-form form-control" type="text" name="usuario" required="">
+                    <div id="msg-error" class="msg-error">
+                        Usuário ou senha incorretos
+                    </div>
+                    <div class="form-group">
+                        <label id="usuarioLabel" class="lbl-form" for="usuario">Usuário</label>
+                        <input id="input-login-user" class="input-form form-control" type="text" name="usuario"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label id="passwordLabel" class="lbl-form" for="senha">Senha</label>
+                        <input id="input-login-password" class="input-form form-control" type="password" name="senha"
+                            required>
+                        <div><a class="lembrar-senha login-hidden-elemts" href="">Esqueceu o login ou a senha?</a>
                         </div>
-                        <div class="form-group">
-                            <label class="lbl-form" for="senha">Senha</label>
-                            <input class="input-form form-control" type="password" name="senha" autocomplete="off"
-                                required="">
-                            <div><a class="lembrar-senha login-hidden-elemts" href="">Esqueceu o login ou a senha?</a>
-                            </div>
-                        </div>
-                        <div class="form-group login-hidden-elemts">
-                            <button class="submit-form btn btn-primary" type="submit">Entrar</button>
-                            <div class="cadastro"><a href="cadastro.html">Cadastre-se</a></div>
-                        </div>
-                    </form>
+                    </div>
+                    <div class="form-group login-hidden-elemts">
+                        <button id="button-logina" class="btn btn-primary">Entrar</button>
+                        <div class="cadastro"><a href="cadastro.html">Cadastre-se</a></div>
+                    </div>
                 </div>
             </div>
             <script>
@@ -84,7 +88,7 @@
             <!--  <div class="up-contain-head">
                 <p>Lorem, ipsum.</p>
             </div> -->
-            
+
             <div class="up-contain-block">
                 <div class="up-contain-call">
                     <span class="up-contain-new">NOVO!</span>
@@ -110,7 +114,7 @@
                     ponto mais importante.</p>
             </div>
         </section>
-      
+
         <div class="container wrapper-middle">
             <div class="wrapper-middle-title"><span>Novidades</span></div>
 
@@ -368,7 +372,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-        <script src="main.js"></script>
+
+    <script src="validuser.js"></script>
 
 </body>
 
