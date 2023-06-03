@@ -95,11 +95,11 @@ const togglePassword02 = document
     .getElementById('password_eye02');
 
 togglePassword02.addEventListener('click', () => {
-    const password = document.querySelector('#inputPassword02');
-    const type = password
+    const password2 = document.querySelector('#inputPassword02');
+    const type = password2
         .getAttribute('type') === 'password' ?
         'text' : 'password';
-    password.setAttribute('type', type);
+    password2.setAttribute('type', type);
 });
 
 
