@@ -31,7 +31,7 @@ const validUser = () => {
         console.log(usuario.length)
         console.log(password.length)
         if (userTemp.usuario == usuario && userTemp.senha == password) {
-            window.location.href = "home_login.html"
+            window.location.href = "/html/home_login.html"
             const token = Math.random().toString(16).substring(2)
             localStorage.setItem('token', token)
 

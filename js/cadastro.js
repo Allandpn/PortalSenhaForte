@@ -20,7 +20,7 @@ const submitForm = () => {
     $(".signup-container").hide();
     window.scrollTo(0, 0);
     setTimeout(CarregaSpinner, 150);
-    setTimeout(ExibeSpinner, 1500);
+    setTimeout(ExibeSpinner, 500);
 }
 
 function CarregaSpinner() {
