@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/css_header.css">
     <link rel="stylesheet" href="css/css_cadastro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,9 +39,8 @@
             <div class="head-search">
                 <form role="search" method="get" class="search-form">
 
-                    <input type="search"
-                        class="search-field form-control form-control-lg form-control form-control-lg-sm"
-                        required placeholder="Search …" value="" name="s" title="Search for:">
+                    <input type="search" class="search-field form-control form-control-sm" placeholder="Search …"
+                        value="" name="s" title="Search for:">
 
                     <i class="fa fa-search search-icon mouse-pointer" aria-hidden="true"></i>
                 </form>
@@ -82,6 +81,7 @@
             </script>
         </nav>
     </header>
+
     <section class="content-site">
         <div class="signup-section">
             <div class="form-header">
@@ -98,16 +98,27 @@
                 <button class="submit-form btn btn-primary" type="submit">Entrar</button>
             </div>
 
+            <div class="mensage-sucess">
+                <span class="mensage-sucess-text">Cadastro efetuado com sucesso!</span>
+                <div class="text-center">
+                    <div class="mensage-sucess-spinner spinner-border" style="width: 5rem; height: 5rem;" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+
+
             <div class="signup-container">
                 <section class="container-login">
-                    <div class="container-align">
-                        <form>
+                    <div class="container-align" id="contain-form">
+                        <form id="form-user">
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="input-usuario">Nome de Usuário</label>
                                     <span>*</span>
                                     <input type="text" class="form-control form-control-lg form-control "
-                                        id="input-usuario" name="input-usuario" required placeholder="Usuário" >                                    
+                                        id="input-usuario" name="input-usuario" required placeholder="Usuário">
                                 </div>
                                 <div class="form-group">
                                     <label for="input-name">Nome</label>
@@ -133,6 +144,13 @@
                                     <input type="password" class="form-control form-control-lg" id="input-password"
                                         name="input-password" required placeholder="Senha">
                                 </div>
+                                <div class="form-group">
+                                    <label for="input-password-confirm">Confirmar Senha</label>
+                                    <span>*</span>
+                                    <input type="password" class="form-control form-control-lg"
+                                        id="input-password-confirm" name="input-password-confirm" required
+                                        placeholder="Senha">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-group">
@@ -144,64 +162,64 @@
 
                                 <div class="form-group">
                                     <label for="input-ddd">Telefone</label>
-                                    <span>*</span>
-                                    <div class="row">
-                                        <div class="col 3">
-                                            <input type="text" class="form-control form-control-lg" id="input-ddd"
-                                                name="input-ddd" required placeholder="DDD">
-                                        </div>
-                                        <div class="col-9">
+                                    <span>*</span> 
+                                        <div >
                                             <input type="text" class="form-control form-control-lg" id="input-telefone"
-                                                name="input-telefone" required placeholder="Telefone">
+                                                name="input-telefone" required placeholder="(DDD) Telefone">
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="select-pais">País</label>
+                                        <span>*</span>
+                                        <select class="form-control form-control-lg" id="select-pais"
+                                            name="select-pais">
+                                            <option>Brasil</option>
+                                            <option>Estados Unidos</option>
+                                            <option>Alemanha</option>
+                                            <option>Japão</option>
+                                            <option>Holanda</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="select-idioma">Idioma de Preferência</label>
+                                        <span>*</span>
+                                        <select class="form-control form-control-lg" id="select-idioma"
+                                            name="select-idioma">
+                                            <option>Português</option>
+                                            <option>Inglês</option>
+                                            <option>Alemão</option>
+                                            <option>Japonês</option>
+                                            <option>Espanhol</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="select-pais">País</label>
-                                    <span>*</span>
-                                    <select class="form-control form-control-lg" id="select-pais" name="select-pais">
-                                        <option>Brasil</option>
-                                        <option>Estados Unidos</option>
-                                        <option>Alemanha</option>
-                                        <option>Japão</option>
-                                        <option>Holanda</option>
-                                    </select>
+                                <span class="required">* Campo Obrigatório</span>
+                                <div class="form-check form-check-main">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+                                        required>
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Li e concordo com os termos da <a
+                                            href="http://127.0.0.1:5500/index.html">política
+                                            de privacidade</a>
+                                    </label>
                                 </div>
-                                <div class="form-group">
-                                    <label for="select-idioma">Idioma de Preferência</label>
-                                    <span>*</span>
-                                    <select class="form-control form-control-lg" id="select-idioma"
-                                        name="select-idioma">
-                                        <option>Português</option>
-                                        <option>Inglês</option>
-                                        <option>Alemão</option>
-                                        <option>Japonês</option>
-                                        <option>Espanhol</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <span class="required">* Campo Obrigatório</span>
-                            <div class="form-check form-check-main">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Li e concordo com os termos da <a href="http://127.0.0.1:5500/index.html">política
-                                        de privacidade</a>
-                                </label>                                
-                            </div>
 
-                            <div class="form-group group-form">
+                                <div class="form-group group-form">
 
-                                <div class="form-group">
-                                    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                                        data-callback="verifyRecaptchaCallback"
-                                        data-expired-callback="expiredRecaptchaCallback"></div>
+                                    <div class="form-group">
+                                        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                            data-callback="verifyRecaptchaCallback"
+                                            data-expired-callback="expiredRecaptchaCallback"></div>
+                                    </div>
+                                    
+
                                 </div>
-                                <div class="form-group">
-                                    <button class="submit-form btn btn-lg btn-primary " type="submit">Cadastrar</button>
-                                </div>
-                            </div>
 
                         </form>
+                        <div class="submit-form-button">
+                            <button id="submit-form-button"
+                                class="btn btn-lg btn-primary ">Cadastrar</button>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -232,4 +250,17 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="cadastro.js"></script>
+
 </body>
+
+</html>

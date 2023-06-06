@@ -17,7 +17,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/074fbb8e37.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="imagex/png" href="./Arquivos/imagens/logo.png">
-
     <title>Senha Forte</title>
 </head>
 
@@ -25,12 +24,12 @@
     <header class="head-main">
         <nav class="head-main-menu">
             <div class="head-logo">
-                <a href="index.html">
-                    <img height="55" src="/Arquivos/imagens/logo_senhaForte.png">
+                <a href="home_login.html">
+                    <img width="152" height="55" src="/Arquivos/imagens/logo_senhaForte.png">
                 </a>
             </div>
             <nav class="head-nav">
-                <a class="mouse-pointer" href="index.html">Home</a>
+                <a class="mouse-pointer" href="home_login.html">Home</a>
                 <a class="mouse-pointer">Artigos</a>
                 <a class="mouse-pointer">Eventos</a>
                 <a class="mouse-pointer">Download</a>
@@ -48,30 +47,46 @@
 
 
             <div class="login-box">
-               
                 <div id="head-login" class="head-login mouse-pointer">
-                    <i class="fa fa-2x fa-user login-icon" aria-hidden="true"></i>
+                    <img src="Arquivos/imagens/perfil.png" width="35px" aria-hidden="true">
                     <i class="fa  fa-ax fa-chevron-down login-icon" aria-hidden="true"></i>
                 </div>
+
                 <div class="head-login-hidden">
-                    <div id="msg-error" class="msg-error">
-                        Usuário ou senha incorretos
+                    <div class="icon_username">
+                        <span id="name_user_db" style="font-weight: bold; margin-left: 0px;">
+                            <script>
+                                const name_user_test = () => {
+                                    const db_user = JSON.parse(localStorage.getItem("db_user"))
+                                    document.getElementById('name_user_db').innerHTML = db_user[0].usuario
+                                }
+                                name_user_test()
+                            </script>
+                        </span>
                     </div>
-                    <div class="form-group">
-                        <label id="usuarioLabel" class="lbl-form" for="usuario">Usuário</label>
-                        <input id="input-login-user" class="input-form form-control" type="text" name="usuario"
-                            required>
+                    <div class="icon-perfil">
+                        <a href="">
+                            <i class="fa  fa-user login-icon-perfil" aria-hidden="true"></i>
+                            <a href="perfil.html"><span>Perfil</span></a>
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <label id="passwordLabel" class="lbl-form" for="senha">Senha</label>
-                        <input id="input-login-password" class="input-form form-control" type="password" name="senha"
-                            required>
-                        <div><a class="lembrar-senha login-hidden-elemts" href="">Esqueceu o login ou a senha?</a>
-                        </div>
+                    <div class="icon-estatistc">
+                        <a href="">
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                            <span>Estatísticas</span>
+                        </a>
                     </div>
-                    <div class="form-group login-hidden-elemts">
-                        <button id="button-logina" class="btn btn-primary">Entrar</button>
-                        <div class="cadastro"><a href="cadastro.html">Cadastre-se</a></div>
+                    <div class="icon-perfil">
+                        <a href="">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </div>
+                    <div class="icon-exit">
+                        <a href="index.html">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <span>Sair</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -373,7 +388,6 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
-    <script src="validuser.js"></script>
 
 </body>
 
