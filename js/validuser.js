@@ -28,8 +28,6 @@ const validUser = () => {
 
     if (usuario.length > 0 && password.length > 0) {
 
-        console.log(usuario.length)
-        console.log(password.length)
         if (userTemp.usuario == usuario && userTemp.senha == password) {
             window.location.href = "/html/home_login.html"
             const token = Math.random().toString(16).substring(2)

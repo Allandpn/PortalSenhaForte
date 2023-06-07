@@ -28,7 +28,7 @@ const deleteUser = (index, user) => {
 
 
 const updateTable = () => {
-    console.log("teste")
+    
     const user = readUser(0)
     document.getElementById('inputUsername01').value = user.usuario
     document.getElementById('inputEmail3').value = user.email
