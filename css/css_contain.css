@@ -124,7 +124,8 @@
 /*Define estilo bloco de Tópicos*/
 
 .list-topics {
-    background-color: #EBEBEB;    
+    background-color: #EBEBEB;  
+    max-height: fit-content;  
 }
 
 .list-topics-head {
@@ -162,6 +163,45 @@
 }
 
 
+/*define estilo para texto artigo*/
+.artigo-subtitle {
+    padding-top: 40px;
+}
+
+.artigo-text-header {
+    font-size: 20px;
+}
+
+.artigo-text {
+    font-size: 18px;
+}
+
+/*define estilo para rodapé sobre o autor*/
+
+#autor {
+    margin-top: 30px;
+}
+
+.img-radius {
+    height: 150px;
+    width: 150px;
+    background-color: #EBEBEB;
+    border-radius: 50%;
+    position: absolute;
+    padding: 0.75em;
+}
+
+.img-autor {
+    text-align: center;
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.description-autor {
+    margin-left: 180px;
+}
 
 /*define estilo para o rodape da pagina */
 .footer-main {
