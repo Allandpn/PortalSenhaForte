@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+
+.contain-main {
+    margin: auto;
+    max-width: 800px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+.contain-head {
+    padding-top: 40px;
+    text-align: left;
+    width: 700px;
+}
+
+.contain-title span {
+    font-size: 23px;
+    font-weight: bold;
+    background-color: #EBEBEB;
+    text-align: center;
+    padding: 4px 8px 4px;
+    border-radius: 5px;
+
+}
+
+.contain-title hr {
+    margin-top: 0px;
+    margin-left: 4px;
+}
+
+.contain-tipo {
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.contain-text {
+    font-size: 16px;
+}
+
+
+.wrapper {
+    margin-top: 90px;
+}
+
+.alert-sec {
+    font-size: 13px;
+    font-weight: bold;
+    max-width: 500px;
+    color: #838383;
+}
+
+
+.test-box {
+    margin-top: 30px;
+    width: 400px;
+}
+
+.inputSenha {
+    margin-top: 20px;
+}
+
+.password-eye {
+    position: absolute;
+    margin-top: -27px;
+    margin-left: 770px;
+    color: #838383;
+}
+
+
+
+
+/* Local para inseir estilo para o botao e barra de visualizaçao da forca da senha */
+
+
+
+
+
+
+.tips-main {
+    margin-top: 180px;
+    margin-bottom: 100px;
+}
+
+.tips-head {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tips-wrapper {
+    margin-top: 15px;
+}
+
+
+.tips-wrapper li {
+    
+}
+
+/* formatação de barras indicadoras de força da senha */
+
+.box-input-senha {
+    flex: 1; 
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    background-color: #EEF5F9;
+    border-radius: 8px;
+    margin-right: 8px;
+    margin-top: 4px;
+    min-height: 6px;
+    max-height: 6px;
+  }
+
+  .box-input-senha:last-child {
+    margin-right: 0;
+  }
+
+

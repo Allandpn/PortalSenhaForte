@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/css_header.css">
+    <link rel="stylesheet" href="../css/teste_senha.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,100&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/074fbb8e37.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="imagex/png" href="../Arquivos/imagens/logo.png">
+    <script type="text/javascript" src="../js/zxcvbn.js"></script>
+
+    <title>Senha Forte</title>
+</head>
+
+<body>
+    <header class="head-main">
+        <nav class="head-main-menu">
+            <div class="head-logo">
+                <a href="home_login.html">
+                    <img width="152" height="55" src="../Arquivos/imagens/logo_senhaForte.png">
+                </a>
+            </div>
+            <nav class="head-nav">
+                <a class="mouse-pointer link-pages" href="home_login.html">Home</a>
+                <a class="mouse-pointer link-pages">Artigos</a>
+                <a class="mouse-pointer link-pages">Eventos</a>
+                <span>
+                    <a class="mouse-pointer dropdown-toggle link-pages" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ferramentas</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="teste_senha.html">Teste de Senha</a>
+                        <a class="dropdown-item" href="#">Blacklists</a>
+                        <!-- <a class="dropdown-item" href="#">Algo mais aqui</a> -->
+                    </div>
+                </span>
+                <a class="mouse-pointer link-pages">Contato</a>
+            </nav>
+            <div class="head-search">
+                <form role="search" method="get" class="search-form">
+
+                    <input type="search" class="search-field form-control form-control-sm" placeholder="Search …"
+                        value="" name="s" title="Search for:">
+
+                    <i class="fa fa-search search-icon mouse-pointer" aria-hidden="true"></i>
+                </form>
+            </div>
+
+
+            <div class="login-box">
+                <div id="head-login" class="head-login mouse-pointer">
+                    <img src="../Arquivos/imagens/perfil.png" width="35px" aria-hidden="true">
+                    <i class="fa  fa-ax fa-chevron-down login-icon" aria-hidden="true"></i>
+                </div>
+
+                <div class="head-login-hidden">
+                    <div class="icon_username">
+                        <span id="name_user_db" style="font-weight: bold; margin-left: 0px;">
+                            <script>
+                                const name_user_test = () => {
+                                    const db_user = JSON.parse(localStorage.getItem("db_user"))
+                                    document.getElementById('name_user_db').innerHTML = db_user[0].usuario
+                                }
+                                name_user_test()
+                            </script>
+                        </span>
+                    </div>
+                    <div class="icon-perfil">
+                        <a href="">
+                            <i class="fa  fa-user login-icon-perfil" aria-hidden="true"></i>
+                            <a href="perfil.html"><span>Perfil</span></a>
+                        </a>
+                    </div>
+                    <div class="icon-estatistc">
+                        <a href="">
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                            <span>Estatísticas</span>
+                        </a>
+                    </div>
+                    <div class="icon-perfil">
+                        <a href="">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </div>
+                    <div class="icon-exit">
+                        <a href="../index.html">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <span>Sair</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).on("click", ".head-login", function () {
+                    $(".head-login-hidden").toggleClass('head-login-show');
+                    $(".head-login").toggleClass('active-head-login');
+                });
+            </script>
+        </nav>
+    </header>
+
+    <section class="wrapper-main">
+
+        <div class="contain-main">
+            <div class="contain-head">
+                <div class="contain-title">
+                    <span>Ferramentas</span>
+                    <hr>
+                </div>
+                <div class="contain-tipo">
+                    Teste de Senha
+                </div>
+                <div class="contain-text">
+                    Verifique se a sua senha realmente é segura. Com nossa ferramenta é possível identificar a força de
+                    sua senha e aumentar a segurança de sua vida digital.
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="alert-sec">Aviso: Sua senha não será armazenada nem compartilhada de nenhuma forma. Todo o
+                    processamento é feito diretamente no seu navegador.</div>
+                <input type="password" class="form-control inputSenha" id="inputSenha" placeholder="Teste sua senha">
+                <i id="password_eye" class="fa fa-eye password-eye" aria-hidden="true"></i>
+            </div>
+            <div class="d-flex  flex-row">
+                <div class="box-input-senha" id="barra-senha-01"></div>
+                <div class="box-input-senha" id="barra-senha-02"></div>
+                <div class="box-input-senha" id="barra-senha-03"></div>
+                <div class="box-input-senha" id="barra-senha-04"></div>
+            </div>
+
+            <!-- Local para insercção do botão de teste e barra de visualização da força da senha
+            Adição de dados de força da senha-->
+            <div class="tips-main">
+                <div class="tips-head">
+                    Força da senha
+                </div>
+                <div class="tips-wrapper">
+                    <p><b>Resultado geral: </b><span id="result-senha-01"></span></p>
+                    <p><b>Número de tentativas necessárias para quebrar a senha, em milhares:</b> <span id="result-senha-02"></span></p>
+                    <p><b>Tempo gasto para invadir um sistema na web com limitação de acesso:</b> <span id="result-senha-03"></span></p>
+                    <p><b>Tempo gasto para invadir um sistema na web com limitação de acesso: </b><span id="result-senha-04"></span></p>
+                </div>
+            </div>
+
+
+            <div class="tips-main">
+                <div class="tips-head">
+                    Dicas para criar senhas seguras
+                </div>
+                <div class="tips-wrapper">
+                    <li>Ter letras maiúsculas e minúsculas, números e caracteres especiais. Ex.: fQw-37*!PnB295_?</li>
+                    <li>Ter um tamanho mínimo razoável (por exemplo, pelo menos entre 10 e 14 caracteres)</li>
+                    <li>Não ser comum ou fraca (ex.: 123456, abdcefg, senha, senha01, qwerty, 1qaz2wsx, login etc.)</li>
+                    <li>Ser exclusiva (ou seja, não ser usada em mais de um site ou sistema)</li>
+                    <li>Não ter relação com dados pessoais do usuário (ex.: nomes, datas, placas de veículos etc.)</li>
+                    <li>Não ser um nome próprio ou um sobrenome</li>
+                    <li>Não se referenciar a coisas publicamente conhecidas (ex.: músicas, filmes, livros, artistas
+                        etc.)</li>
+                    <li>Não ser uma palavra existente em dicionários de qualquer idioma</li>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <footer class="footer-main">
+        <div class="footer-content container">
+            <div class="row">
+                <div class="footer-text col">
+                    <span>Sobre</span>
+                    <span>Contato</span>
+                    <span>Autores</span>
+                    <span>Política de privacidade</span>
+                </div>
+                <div class="footer-text col">
+                    <span>Signa-nos nas nossas redes sociais: </span>
+                    <span><i class="fa-brands fa-facebook"></i></span>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                    <span><i class="fa-brands fa-linkedin"></i></span>
+                </div>
+            </div>
+            <div class="copyright">@copy</div>
+
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/testeSenha.js"></script>
+</body>
+
+</html>

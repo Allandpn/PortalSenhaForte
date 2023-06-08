@@ -1,5 +1,4 @@
-
-/*define estilo do cabeçalho de toadas as páginas*/
+/*define estilo do cabeçalho de todas as páginas*/
 
 
 @charset "UTF-8";
@@ -54,10 +53,13 @@
     text-decoration: none;
 }
 
-.head-nav a {
-    margin-left: 13px;
-    text-decoration: none;
+.link-pages {
+
+    margin-left: 16px;
 }
+
+
+
 
 
 
@@ -101,8 +103,11 @@
     font-family: 'Montserrat', sans-serif;
     border-radius: 8px;
     color: #2455C3;
-    
+    display: none;
+
 }
+
+
 
 .head-login-hidden span {
     margin-left: 15px;
@@ -146,9 +151,7 @@
 
 
 
-.head-login-hidden {
-    display: none;
-}
+
 
 .head-login-show {
     display: inline;
@@ -164,4 +167,22 @@
 
 .list-articles-title {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/*define estilo para o rodape da pagina */
+.footer-main {
+    padding-top: 15px;
+    background-color: #2455C3;
+    height: 75px;
+    color: aliceblue;; 
+}
+
+.footer-text span{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
 }

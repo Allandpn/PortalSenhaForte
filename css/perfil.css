@@ -92,8 +92,7 @@
 
 .password-eye {
     position: absolute;
-    margin-top: -27px; 
-    /* alterar para -27 */
+    margin-top: -27px;     
     margin-left: 170px;
     color: #838383;
 }
