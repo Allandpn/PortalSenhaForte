@@ -16,6 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/074fbb8e37.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="imagex/png" href="../Arquivos/imagens/logo.png">
+    <script type="text/javascript" src="../js/zxcvbn.js"></script>
 
     <title>Senha Forte</title>
 </head>
@@ -126,12 +127,29 @@
             <div class="wrapper">
                 <div class="alert-sec">Aviso: Sua senha não será armazenada nem compartilhada de nenhuma forma. Todo o
                     processamento é feito diretamente no seu navegador.</div>
-                <input type="text" class="form-control inputSenha" id="inputSenha" placeholder="Digite sua senha">
+                <input type="password" class="form-control inputSenha" id="inputSenha" placeholder="Teste sua senha">
                 <i id="password_eye" class="fa fa-eye password-eye" aria-hidden="true"></i>
             </div>
+            <div class="d-flex  flex-row">
+                <div class="box-input-senha" id="barra-senha-01"></div>
+                <div class="box-input-senha" id="barra-senha-02"></div>
+                <div class="box-input-senha" id="barra-senha-03"></div>
+                <div class="box-input-senha" id="barra-senha-04"></div>
+            </div>
 
-            <!-- Local para insercção do botão de teste e barra de visualização da força da senha-->
-
+            <!-- Local para insercção do botão de teste e barra de visualização da força da senha
+            Adição de dados de força da senha-->
+            <div class="tips-main">
+                <div class="tips-head">
+                    Força da senha
+                </div>
+                <div class="tips-wrapper">
+                    <p><b>Resultado geral: </b><span id="result-senha-01"></span></p>
+                    <p><b>Número de tentativas necessárias para quebrar a senha, em milhares:</b> <span id="result-senha-02"></span></p>
+                    <p><b>Tempo gasto para invadir um sistema na web com limitação de acesso:</b> <span id="result-senha-03"></span></p>
+                    <p><b>Tempo gasto para invadir um sistema na web com limitação de acesso: </b><span id="result-senha-04"></span></p>
+                </div>
+            </div>
 
 
             <div class="tips-main">
@@ -149,8 +167,6 @@
                         etc.)</li>
                     <li>Não use uma palavra existente em dicionários de qualquer idioma</li>
                 </div>
-
-
             </div>
 
         </div>
@@ -182,19 +198,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -204,7 +207,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="../js/teste_senha.js"></script>
+    <script type="text/javascript" src="../js/testeSenha.js"></script>
 </body>
 
 </html>
