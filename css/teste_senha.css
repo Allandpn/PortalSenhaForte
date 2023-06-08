@@ -99,4 +99,22 @@
     
 }
 
+/* formatação de barras indicadoras de força da senha */
+
+.box-input-senha {
+    flex: 1; 
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    background-color: #EEF5F9;
+    border-radius: 8px;
+    margin-right: 8px;
+    margin-top: 4px;
+    min-height: 6px;
+    max-height: 6px;
+  }
+
+  .box-input-senha:last-child {
+    margin-right: 0;
+  }
+
 
