@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/css_header.css">
+    <link rel="stylesheet" href="../css/css_home_login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,100&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/074fbb8e37.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="imagex/png" href="./Arquivos/imagens/logo.png">
+    <title>Senha Forte</title>
+</head>
+
+<body>
+    <header class="head-main">
+        <nav class="head-main-menu">
+            <div class="head-logo">
+                <a href="home_login.html">
+                    <img width="152" height="55" src="../Arquivos/imagens/logo_senhaForte.png">
+                </a>
+            </div>
+            <nav class="head-nav">
+                <a class="mouse-pointer link-pages" href="home_login.html">Home</a>
+                <a class="mouse-pointer link-pages">Artigos</a>
+                <a class="mouse-pointer link-pages">Eventos</a>
+                <span>
+                    <a class="mouse-pointer dropdown-toggle link-pages" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ferramentas</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="teste_senha.html">Teste de Senha</a>
+                        <a class="dropdown-item" href="#">Blacklists</a>
+                        <!-- <a class="dropdown-item" href="#">Algo mais aqui</a> -->
+                      </div>
+                </span>
+                <a class="mouse-pointer link-pages">Contato</a>
+            </nav>
+            <div class="head-search">
+                <form role="search" method="get" class="search-form">
+
+                    <input type="search" class="search-field form-control form-control-sm" placeholder="Search …"
+                        value="" name="s" title="Search for:">
+
+                    <i class="fa fa-search search-icon mouse-pointer" aria-hidden="true"></i>
+                </form>
+            </div>
+
+
+            <div class="login-box">
+                <div id="head-login" class="head-login mouse-pointer">
+                    <img src="../Arquivos/imagens/perfil.png" width="35px" aria-hidden="true">
+                    <i class="fa  fa-ax fa-chevron-down login-icon" aria-hidden="true"></i>
+                </div>
+
+                <div class="head-login-hidden">
+                    <div class="icon_username">
+                        <span id="name_user_db" style="font-weight: bold; margin-left: 0px;">
+                            <script>
+                                const name_user_test = () => {
+                                    const db_user = JSON.parse(localStorage.getItem("db_user"))
+                                    document.getElementById('name_user_db').innerHTML = db_user[0].usuario
+                                }
+                                name_user_test()
+                            </script>
+                        </span>
+                    </div>
+                    <div class="icon-perfil">
+                        <a href="">
+                            <i class="fa  fa-user login-icon-perfil" aria-hidden="true"></i>
+                            <a href="perfil.html"><span>Perfil</span></a>
+                        </a>
+                    </div>
+                    <div class="icon-estatistc">
+                        <a href="">
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                            <span>Estatísticas</span>
+                        </a>
+                    </div>
+                    <div class="icon-perfil">
+                        <a href="">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </div>
+                    <div class="icon-exit">
+                        <a href="../index.html">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <span>Sair</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).on("click", ".head-login", function () {
+                    $(".head-login-hidden").toggleClass('head-login-show');
+                    $(".head-login").toggleClass('active-head-login');
+                });
+            </script>
+        </nav>
+    </header>
+    <div class=" wrapper">
+        <section class="up-contain-main">        
+            <div class="up-contain-block">
+                <div class="up-contain-call">
+                    <span class="up-contain-new">NOVO!</span>
+                    <span class="up-contain-data"> 15 de maio de 2023</span>
+                </div>
+                <p class="up-contain-title">Segurança da informação: o que é, 5 pilares e como garantir nas empresas?
+                </p>
+                <p class="up-contain-autor">Por Rafael Bastos.</p>
+                <p class="up-contain-resumo">Pergunte a gestores de grandes empresas qual a sua maior preocupação no
+                    momento e é muito provável que a segurança da informação apareça entre elas. Não é para menos,
+                    afinal, há dados relacionados ao negócio cujo valor é tão alto que fica difícil mensurar.</p>
+            </div>
+            <div class="up-contain-block">
+                <div class="up-contain-call">
+                    <span class="up-contain-new">NOVO!</span>
+                    <span class="up-contain-data"> 22 de maio de 2023</span>
+                </div>
+                <p class="up-contain-title">O que é Bard e como usar a inteligência artificial do Google?</p>
+                <p class="up-contain-autor">Por Antonio Almeida.</p>
+                <p class="up-contain-resumo">O Bard é a mais recente aposta do Google para manter a sua posição de líder
+                    em serviços de busca na internet. Embora ainda esteja em fase de testes, ele já é considerado uma
+                    ameaça à sensação do momento, o Chat GPT. Sobre isso, a diferença entre Bard e Chat GPT nem é o
+                    ponto mais importante.</p>
+            </div>
+        </section>
+
+        <div class="container wrapper-middle">
+            <div class="wrapper-middle-title"><span>Novidades</span></div>
+
+            <div class="row">
+                <section class="col-9 list-articles container">
+                    <hr>
+                    <div class="row">
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">17 tecnologias espaciais usadas no dia a dia e como elas
+                                contribuem na sociedade</p>
+                            <p class="list-articles-autor">Por Alfredo Wagner.</p>
+                            <p class="list-articles-resumo">É possível que você esteja fazendo uso de uma tecnologia
+                                espacial agora mesmo, sem se dar conta disso.
+                                Inicialmente desenvolvidas para uso exclusivo dos astronautas, diversas tecnologias
+                                espaciais sofreram adaptações, melhorando a vida das pessoas também na Terra.
+                                Quer um exemplo? Os comandos digitais em veículos foram desenvolvidos....<a href="">
+                                    Read more</a>
+                            </p>
+                            <p class="list-articles-data">08 de maio de 2023
+                            </p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">O que é Chat GPT, impactos e como usar esta inteligência
+                                artificial?</p>
+                            <p class="list-articles-autor">Por Alice Lispector</p>
+                            <p class="list-articles-resumo">Se você acompanha as notícias sobre inovação, certamente já
+                                ouviu falar em Chat GPT.
+                                Mas o que exatamente é essa ferramenta que está dando o que falar no mundo todo?
+                                Com apenas dois meses de funcionamento, o Chat GPT já tinha conquistado 100 milhões de
+                                usuários, tornando-se o app de crescimento mais rápido na história....<a href=""> Read
+                                    more</a>
+                            </p>
+                            <p class="list-articles-data">01 de maio de 2023
+                            </p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Conheça 10 empresas inovadoras que fazem a diferença no mundo
+                            </p>
+                            <p class="list-articles-autor">Por Lindolfo Costa</p>
+                            <p class="list-articles-resumo">O que caracteriza as empresas inovadoras?
+                                Por que alguns negócios conseguem se manter sempre relevantes, enquanto outros não
+                                acompanham a evolução do mercado e são engolidos pela concorrência?
+                                As respostas para essas perguntas são importantes para as organizações estabelecerem
+                                suas estratégias de negócios, se inspirando....<a href=""> Read more</a>
+                            </p>
+                            <p class="list-articles-data">24 de abril de 2023
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Segurança da informação: o que é, 5 pilares e como garantir
+                                nas empresas?</p>
+                            <p class="list-articles-autor">Por Luiza França</p>
+                            <p class="list-articles-resumo">Pergunte a gestores de grandes empresas qual a sua maior
+                                preocupação no momento e é muito provável que a segurança da informação apareça entre
+                                elas.
+                                Não é para menos, afinal, há dados relacionados ao negócio cujo valor é tão alto que
+                                fica difícil mensurar.
+                                São questões relacionadas ao modelo de atuação ou à sua operação que
+                                ....<a href=""> Read more</a>
+                            </p>
+                            <p class="list-articles-data">17 de abril de 2023
+                            </p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Big Data: como funciona, exemplos, importância e desafios</p>
+                            <p class="list-articles-autor">Por Nicolas Leal</p>
+                            <p class="list-articles-resumo">O que acha de fazer do Big Data o futuro da sua carreira
+                                profissional?
+                                Se isso ainda soa estranho para você, é bom se atualizar.
+                                Quando falamos no conceito de Big Data, nos referimos a uma verdadeira revolução
+                                tecnológica, capaz de qualificar os resultados das empresas.
+                                Isso explica o grande interesse pelo recurso em todo o mundo....<a href=""> Read
+                                    more</a>
+                            </p>
+                            <p class="list-articles-data">10 de abril de 2023
+                            </p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Inclusão digital: o que é, importância e como devemos
+                                promover?</p>
+                            <p class="list-articles-autor">Por Pedro Paulo.</p>
+                            <p class="list-articles-resumo">A inclusão digital precisa estar na agenda de prioridades de
+                                todos os países.
+                                Esse é um dos muitos desafios que o governo brasileiro tem pela frente, considerando que
+                                mais de 33 milhões de pessoas no país não têm acesso à internet, como aponta um estudo
+                                da PwC, publicado no portal G1.
+                                Porém, a exclusão digital não acontece apenas em....<a href=""> Read
+                                    more</a>
+                            </p>
+                            <p class="list-articles-data">03 de abril de 2023
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Ciência de dados: o que é, principais conceitos e como atuar?
+                            </p>
+                            <p class="list-articles-autor">Por Giseli Maria</p>
+                            <p class="list-articles-resumo">O que você sabe sobre ciência de dados?
+                                Informar-se sobre o tema é uma ótima maneira de compreender melhor a complexidade do
+                                mundo no qual vivemos hoje.
+                                Não existe a menor possibilidade de comparar a quantidade de informações a que temos
+                                acesso atualmente com o que a humanidade tinha disponível décadas atrás....<a href="">
+                                    Read more</a>
+                            </p>
+                            <p class="list-articles-data">27 de março de 2023
+                            </p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Vazamento de dados: o que fazer e principais casos do Brasil
+                            </p>
+                            <p class="list-articles-autor">Por Alexandro Antunes</p>
+                            <p class="list-articles-resumo">Desde a chegada da internet, o vazamento de dados é um risco
+                                que preocupa pessoas físicas e empresas.
+                                No Brasil, esse é um problema crítico, já que somos o sexto país com mais casos
+                                registrados, como aponta uma pesquisa publicada na revista Isto É.
+                                De acordo com o levantamento, só no mês de novembro de 2021, mais de....<a href="">
+                                    Read more</a>
+                            </p>
+                            <p class="list-articles-data">20 de março de 2023
+                            </p>
+                        </div>
+                        <div class="col list-articles-block">
+                            <p class="list-articles-title">Web 3.0: o que é, características e como ela vai mudar a
+                                internet?</p>
+                            <p class="list-articles-autor">Por Maria Betânia</p>
+                            <p class="list-articles-resumo">Web 3.0 é o nome dado a uma nova fase na evolução da rede
+                                mundial de computadores.
+                                Quem usa a internet há bastante tempo sabe que a experiência de navegar se transformou
+                                muito no decorrer dos anos, e esse percurso é classificado em três períodos principais:
+                                a web 1.0, web 2.0 e web 3.0.
+                                No caso da última, que é o tema deste texto, embora ela....<a href=""> Read more</a>
+                            </p>
+                            <p class="list-articles-data">13 de março de 2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="down-buttom-page">
+                        <button class="btn btn-primary">Anterior</button>
+                        <button class="btn btn-primary">1</button>
+                        <button class="btn btn-primary">2</button>
+                        <button class="btn btn-primary">3</button>
+                        <button class="btn btn-primary">Próximo</button>
+                    </div>
+                </section>
+                <aside class="col list-topics">
+                    <div class="list-topics-head">
+                        <p>Tópicos</p>
+                    </div>
+                    <div class="list-topics-block">
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Código</span>
+                            <div class="list-topics-content">
+                                <li><a>Desenvolvimento de aplicações</a></li>
+                                <li><a>Navegadores</a></li>
+                                <li><a>CSS</a></li>
+                                <li><a>HTML</a></li>
+                                <li><a>JavaScript</a></li>
+                                <li><a>O lado do servidor</a></li>
+                            </div>
+                        </div>
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Projeto</span>
+                            <div class="list-topics-content">
+                                <li>Identidade da marca</li>
+                                <li>Design gráfico</li>
+                                <li>Layout e grades</li>
+                                <li>Dispositivo móvel</li>
+                                <li>Design Responsivo</li>
+                                <li>Tipografia e fontes da Web</li>
+                            </div>
+                        </div>
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Indústria e Negócios</span>
+                            <div class="list-topics-content">
+                                <li>Negócios</li>
+                                <li>Carreira</li>
+                                <li>Indústria</li>
+                                <li>Estado da web</li>
+                            </div>
+                        </div>
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Processo</span>
+                            <div class="list-topics-content">
+                                <li>Criatividade</li>
+                                <li>Gerenciamento de projetos</li>
+                                <li>Estratégia Web</li>
+                                <li>Fluxo de trabalho e ferramentas</li>
+                            </div>
+                        </div>
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Experiência do usuário</span>
+                            <div class="list-topics-content">
+                                <li>Acessibilidade</li>
+                                <li>Arquitetura de informação</li>
+                                <li>Design de interação</li>
+                                <li>Usabilidade</li>
+                                <li>Pesquisa do usuário</li>
+                            </div>
+                        </div>
+                        <div class="list-topics-area">
+                            <span class="list-topics-title">Contente</span>
+                            <div class="list-topics-content">
+                                <li>Comunidade</li>
+                                <li>Estratégia de conteúdo</li>
+                                <li>Escrita</li>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <section class="down-contain">
+            <span class="sbc-newsl">Receba nossos artigos mais recentes em sua caixa de entrada. Inscreva-se para
+                receber
+                alertas por e-mail.</span>
+            <i class="fa fa-hand-pointer-o mouse-pointer" aria-hidden="true"></i>
+        </section>
+    </div>
+
+    <footer class="footer-main">
+        <div class="footer-content container">
+            <div class="row">
+                <div class="footer-text col">
+                    <span>Sobre</span>
+                    <span>Contato</span>
+                    <span>Autores</span>
+                    <span>Política de privacidade</span>
+                </div>
+                <div class="footer-text col">
+                    <span>Signa-nos nas nossas redes sociais: </span>
+                    <span><i class="fa-brands fa-facebook"></i></span>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                    <span><i class="fa-brands fa-linkedin"></i></span>
+                </div>
+            </div>
+            <div class="copyright">@copy</div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

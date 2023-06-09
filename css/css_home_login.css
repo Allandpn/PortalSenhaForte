@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+.wrapper {
+    padding: 40px 80px 80px 80px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.up-contain-main {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+/*Define estilo sessao superior da pagina*/
+.up-contain-head {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 60px;
+
+}
+
+.up-contain-block {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.up-contain-call {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.up-contain-new {
+    padding: 4px;
+    color: rgb(248, 250, 255);
+    background-color: #2455C3;
+    border-radius: 3px;
+    margin-right: 10px;
+
+}
+
+.up-contain-title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.up-contain-autor {
+    text-align: left;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.up-contain-resumo {
+    text-align: left;
+    font-size: 18px;
+}
+
+
+
+/*Define estilo Grid de assuntos */
+
+
+
+.wrapper-middle-title {
+    
+    text-align: left;
+    font-size: 27px;
+   
+    margin-top: 100px;  
+}
+
+.wrapper-middle-title span {
+    background-color: #EBEBEB;    
+    text-align: center;
+    padding: 4px 8px 4px;
+    border-radius: 5px; 
+
+}
+
+.list-articles hr {
+    background-color: #EBEBEB;      
+    margin-top: 0px;
+    margin-bottom: 40px;
+
+}
+
+
+.list-articles-title {
+    text-align: left;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.list-articles-autor {
+    text-align: left;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.list-articles-resumo {
+    text-align: left;
+    font-size: 16px;
+}
+
+.list-articles-data {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 45px;
+}
+
+.down-buttom-page {
+    text-align: center;
+}
+
+
+/*Define estilo bloco de Tópicos*/
+
+.list-topics {
+    background-color: #EBEBEB;    
+}
+
+.list-topics-head {
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.list-topics-title {
+    font-size: 19px;
+    font-weight: bold;
+    text-align: left;    
+}
+
+.list-topics-content {
+    list-style-type: none;
+    font-size: 16px;    
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 22px;
+    cursor: pointer;
+}
+
+
+.down-contain {
+    background-color: aliceblue;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;    
+}
+
+.fa-hand-pointer-o {
+    margin-left: 10px;
+    color: #2455C3;
+}
+
+
+
+/*define estilo para o rodape da pagina */
+.footer-main {
+    padding-top: 15px;
+    background-color: #2455C3;
+    height: 75px;
+    color: aliceblue;; 
+}
+
+.footer-text span{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+}
