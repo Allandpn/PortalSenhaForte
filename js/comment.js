@@ -1,3 +1,19 @@
+
+
+
+
+// retorna nome do usuario logado
+const userName = () => {
+    const user = JSON.parse(localStorage.getItem("db_user")) ?? []
+	const name = user.usuario
+	console.log(user)
+	return name
+}
+
+
+
+
+
 const users = [
 	{
 		name: 'Jayski Oje',
@@ -62,18 +78,23 @@ const mappedUsers = comments.map((user, index) => {
 	const classDisliked = user.disliked ? 'disliked' : '';
 
 	return `<div class="project-card" key=${index} id=${index}>
-                <img src=${user.avatar} alt="user profile image" class="user-avatar" />
-                <div class="details">
-                 <p>${user.name}</p>
-                 <p>${user.home_address}</p>
-               </div>
-							 <div class="like-button ${classLiked}" id="likeButton">
-							 <i class="fa fa-thumbs-up "></i>
-							 </div>
-							 <span class="like-number" >${likeNumber}</span>
-							 <div class="dislike-button  ${classDisliked}" id=dislikeButton">
-							 <i class="fa fa-thumbs-down "></i>
-												</div>
+                <div class= "left-wrapper"><img src=${user.avatar} alt="user profile image" class="user-avatar" /></div>
+                <div class="right-wrapper">
+                	<div class="details">
+	                 <p class="name-comment">${user.name}</p>
+					 <hr>
+	                 <p class="content-comment">${user.home_address}</p>
+	               </div>
+								 <div class="icon-comment-main">
+								 	<div class="like-button icon-comment ${classLiked}" id="likeButton">
+									 <i class="fa fa-thumbs-up"></i>
+									 </div>
+									 <span class="like-number icon-comment" >${likeNumber}</span>
+									 <div class="dislike-button icon-comment  ${classDisliked}" id=dislikeButton">
+									 <i class="fa fa-thumbs-down "></i>
+														</div>
+								 </div>
+                </div>
           </div>`;
 });
 
