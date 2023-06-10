@@ -5,13 +5,13 @@
 // retorna nome do usuario logado
 const userName = () => {
     const user = JSON.parse(localStorage.getItem("db_user")) ?? []
-	const name = user.usuario
-	console.log(user)
+	const name = user[0].usuario
+	console.log("teste")
 	return name
 }
 
 
-
+console.log(userName())
 
 
 const users = [
@@ -52,8 +52,10 @@ textarea.addEventListener('input', e => {
 commentBtn.addEventListener('click', () => {
 	const parsedComents = JSON.parse(localStorage.getItem('users'));
 
+	const username = userName()
+
 	parsedComents.push({
-		name: 'jenny simp',
+		name: username,
 		home_address: text,
 		email: 'jenmny@exp',
 		avatar: 'Arquivos/imagens/profile1.jpg',

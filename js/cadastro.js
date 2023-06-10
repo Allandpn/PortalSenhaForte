@@ -59,7 +59,7 @@ const cadastrarUser = () => {
         }
 
         createUser(user)
-        submitForm()
+        submitForm()        
     }
 }
 
