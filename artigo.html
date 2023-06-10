@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/css_header.css">
     <link rel="stylesheet" href="css/css_contain.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,100&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/074fbb8e37.js" crossorigin="anonymous"></script>
     <title>Portal Senha Forte</title>
 </head>
+
 <body>
     <header class="head-main">
         <nav class="head-main-menu" aria-label="nav-main">
             <div class="head-logo">
                 <a href="index.html">
-                    <img width="152" height="55" src="Arquivos/imagens/logo_senhaForte.png">
+                    <img height="55" src="Arquivos/imagens/logo_senhaForte.png">
                 </a>
             </div>
             <nav class="head-nav" aria-label="nav-head">
                 <a class="mouse-pointer" href="index.html">Home</a>
-                <a class="mouse-pointer">Artigos</a>
-                <a class="mouse-pointer">Eventos</a>
-                <a class="mouse-pointer">Download</a>
-                <a class="mouse-pointer">Contato</a>
+                <a class="mouse-pointer link-pages">Artigos</a>
+                <a class="mouse-pointer link-pages">Eventos</a>
+                <span>
+                    <a class="mouse-pointer dropdown-toggle link-pages" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ferramentas</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="html/teste_senha.html">Teste de Senha</a>
+                        <a class="dropdown-item" href="#">Blacklists</a>
+                        
+                      </div>
+                </span>
+                <a class="mouse-pointer link-pages">Contato</a>
             </nav>
             <div class="head-search">
                 <form role="search" method="get" class="search-form">
@@ -42,29 +51,31 @@
             </div>
 
 
-            <div class="login-box">
+            <div class="login-box">               
                 <div id="head-login" class="head-login mouse-pointer">
                     <i class="fa fa-2x fa-user login-icon" aria-hidden="true"></i>
                     <i class="fa  fa-ax fa-chevron-down login-icon" aria-hidden="true"></i>
                 </div>
                 <div class="head-login-hidden">
-                    <form action="" method="post">
-                        <div class="form-group">
-                            <label class="lbl-form" for="usuario">Login</label>
-                            <input class="input-form form-control" type="text" name="usuario" required="">
+                    <div id="msg-error" class="msg-error">
+                        Usuário ou senha incorretos
+                    </div>
+                    <div class="form-group">
+                        <label id="usuarioLabel" class="lbl-form" for="usuario">Usuário</label>
+                        <input id="input-login-user" class="input-form form-control" type="text" name="usuario"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label id="passwordLabel" class="lbl-form" for="senha">Senha</label>
+                        <input id="input-login-password" class="input-form form-control" type="password" name="senha"
+                            required>
+                        <div><a class="lembrar-senha login-hidden-elemts" href="">Esqueceu o login ou a senha?</a>
                         </div>
-                        <div class="form-group">
-                            <label class="lbl-form" for="senha">Senha</label>
-                            <input class="input-form form-control" type="password" name="senha" autocomplete="off"
-                                required="">
-                            <div><a class="lembrar-senha login-hidden-elemts" href="">Esqueceu o login ou a senha?</a>
-                            </div>
-                        </div>
-                        <div class="form-group login-hidden-elemts">
-                            <button class="submit-form btn btn-primary" type="submit">Entrar</button>
-                            <div class="cadastro"><a href="html/cadastro.html">Cadastre-se</a></div>
-                        </div>
-                    </form>
+                    </div>
+                    <div class="form-group login-hidden-elemts">
+                        <button id="button-logina" class="btn btn-primary">Entrar</button>
+                        <div class="cadastro"><a href="html/cadastro.html">Cadastre-se</a></div>
+                    </div>
                 </div>
             </div>
             <script>
@@ -80,64 +91,94 @@
             17 tecnologias espaciais usadas no dia a dia e como elas contribuem na sociedade
         </section>
         <section class="artigo-head-img text-center wrapper">
-            <img src="Arquivos/imagens/artigo-head-img.jpg" class="img-fluid" alt="mão segurando holograma de um globo terrestre">
+            <img src="Arquivos/imagens/artigo-head-img.jpg" class="img-fluid"
+                alt="mão segurando holograma de um globo terrestre">
             <p class="artigo-subtitle h4">Como A Tecnologia Espacial Vem Contribuindo Em Nossas Vidas?</p>
             <p class="text-right ">por <a href="https://fia.com.br/">FIA BUSINESS SCHOOL</a> | 12 de maio 2023</p>
         </section>
         <div class="row">
             <section class="artigo-text-header text-justify ">
-                <p>Não é de hoje que as tecnologias espaciais “pousam” nos lares terrestres, tornando a vida mais fácil em vários sentidos.
-                    É um processo parecido com o que acontece em tempos de guerra, em que condições extremas pedem soluções fora da caixa, ou seja, inovadoras.
+                <p>Não é de hoje que as tecnologias espaciais “pousam” nos lares terrestres, tornando a vida mais fácil
+                    em vários sentidos.
+                    É um processo parecido com o que acontece em tempos de guerra, em que condições extremas pedem
+                    soluções fora da caixa, ou seja, inovadoras.
                 </p>
 
-                    
-                <p>Ao criar uma solução para melhorar as condições de vida humana em explorações espaciais, os cientistas acabam inevitavelmente solucionando problemas terráqueos.
-                    Portanto, a tecnologia espacial deve ser tratada não só como uma solução para as questões aeroespaciais, como para diversos problemas enfrentados pelos cidadãos comuns.
+
+                <p>Ao criar uma solução para melhorar as condições de vida humana em explorações espaciais, os
+                    cientistas acabam inevitavelmente solucionando problemas terráqueos.
+                    Portanto, a tecnologia espacial deve ser tratada não só como uma solução para as questões
+                    aeroespaciais, como para diversos problemas enfrentados pelos cidadãos comuns.
                 </p>
             </section>
             <section class="col-9 container artigo-text">
-                <p>Ou seja, ao buscar o desenvolvimento da tecnologia no espaço, a humanidade acaba por se beneficiar, criando soluções adaptáveis.
+                <p>Ou seja, ao buscar o desenvolvimento da tecnologia no espaço, a humanidade acaba por se beneficiar,
+                    criando soluções adaptáveis.
                     O mais interessante é que essas soluções não se restringem a produtos inovadores.
-                    Graças à tecnologia espacial, até mesmo o controle sobre a qualidade dos alimentos pode ser aprimorado.    
-                    Outro campo que evoluiu bastante em razão da tecnologia espacial é o da navegação, cujos avanços levaram ao desenvolvimento de pistas de pouso melhores.
+                    Graças à tecnologia espacial, até mesmo o controle sobre a qualidade dos alimentos pode ser
+                    aprimorado.
+                    Outro campo que evoluiu bastante em razão da tecnologia espacial é o da navegação, cujos avanços
+                    levaram ao desenvolvimento de pistas de pouso melhores.
                 </p>
                 <p>
-                    Um dos desafios que a NASA e outras agências espaciais sempre enfrentaram foi o tamanho das câmeras usadas para gravar vídeos.
-                    Afinal, o espaço interno de uma nave é sempre restrito, o que inviabiliza o uso de câmeras grandes e com longos cabos.
-                    Foi então que, na década de 1990, os estudos desenvolvidos no espaço levaram o engenheiro Eric Fossum a criar um novo sensor para câmeras de vídeo.
-                    Chamado de CMOS-APS (semicondutor de óxido de metal complementar de pixel ativo), esse novo sensor resultou da combinação de técnicas japonesas e tecnologias inovadoras em construção de chips.
-                    A iniciativa foi tão bem-sucedida que até hoje o material é utilizado em câmeras DSLR na maioria dos smartphones.
+                    Um dos desafios que a NASA e outras agências espaciais sempre enfrentaram foi o tamanho das câmeras
+                    usadas para gravar vídeos.
+                    Afinal, o espaço interno de uma nave é sempre restrito, o que inviabiliza o uso de câmeras grandes e
+                    com longos cabos.
+                    Foi então que, na década de 1990, os estudos desenvolvidos no espaço levaram o engenheiro Eric
+                    Fossum a criar um novo sensor para câmeras de vídeo.
+                    Chamado de CMOS-APS (semicondutor de óxido de metal complementar de pixel ativo), esse novo sensor
+                    resultou da combinação de técnicas japonesas e tecnologias inovadoras em construção de chips.
+                    A iniciativa foi tão bem-sucedida que até hoje o material é utilizado em câmeras DSLR na maioria dos
+                    smartphones.
                 </p>
                 <p>
                     Outro desafio enfrentado desde sempre pelas explorações espaciais é a falta de água no espaço.
                     Água potável, então, mais difícil ainda.
-                    Por isso, toda água que os astronautas levam para o espaço deve ser reaproveitada, o que demanda uma tecnologia em filtragem simples e eficaz.
-                    Nasceu assim o sistema de filtragem por cartuchos de iodo, que se destaca pela sua grande eficiência em eliminar bactérias e microrganismos.
-                    Essa tecnologia espacial vem sendo usada na Terra em filtros domésticos e até para limpeza da água de piscinas.
+                    Por isso, toda água que os astronautas levam para o espaço deve ser reaproveitada, o que demanda uma
+                    tecnologia em filtragem simples e eficaz.
+                    Nasceu assim o sistema de filtragem por cartuchos de iodo, que se destaca pela sua grande eficiência
+                    em eliminar bactérias e microrganismos.
+                    Essa tecnologia espacial vem sendo usada na Terra em filtros domésticos e até para limpeza da água
+                    de piscinas.
                 </p>
                 <p>
                     A área da saúde é provavelmente uma das mais beneficiadas pelo avanço da tecnologia espacial.
-                    Graças a ela, a medição de temperatura, principalmente em bebês e crianças, deixou de ser um problema, com a criação do termômetro infravermelho.
-                    Essa é a tecnologia usada para saber a temperatura de planetas a milhões de anos-luz, com base na variação da cor que cada um deles emite.
-                    A partir disso, a empresa Diatek teve a brilhante ideia de pedir suporte da NASA para desenvolver um termômetro que dispensasse o toque nas pessoas.
+                    Graças a ela, a medição de temperatura, principalmente em bebês e crianças, deixou de ser um
+                    problema, com a criação do termômetro infravermelho.
+                    Essa é a tecnologia usada para saber a temperatura de planetas a milhões de anos-luz, com base na
+                    variação da cor que cada um deles emite.
+                    A partir disso, a empresa Diatek teve a brilhante ideia de pedir suporte da NASA para desenvolver um
+                    termômetro que dispensasse o toque nas pessoas.
                     Além disso, o dispositivo não usa mercúrio, que é uma substância perigosa.
-                    Contando com a tecnologia no espaço, a Diatek conseguiu desenvolver um produto que estima a temperatura utilizando a energia infravermelha que emana dos tímpanos.
+                    Contando com a tecnologia no espaço, a Diatek conseguiu desenvolver um produto que estima a
+                    temperatura utilizando a energia infravermelha que emana dos tímpanos.
                     O resultado é de alta precisão, variando em apenas 0,1ºC.
                 </p>
                 <p>
                     Você já deve ter ouvido falar sobre o travesseiro da NASA.
-                    O que nem todos sabem é que a NASA, embora tenha realmente feito parte dessa descoberta, jamais utilizou essa tecnologia espacial em suas missões.
-                    Essa história aconteceu em 1966, quando a agência espacial americana buscava desenvolver um material que se moldasse ao corpo dos astronautas.
-                    Foi então que os pesquisadores Charles Yost e Charles Kubokawa, contratados pela NASA, desenvolveram uma espuma com elevada dissipação de energia, chamada viscoelástica.
-                    A ideia era que ela fosse um material utilizado nos assentos das naves e que servisse como amortecedor para eventuais impactos.
-                    O projeto acabou engavetado, mas felizmente os dois Charles perceberam que o material tinha potencial para ser comercializado fora dos domínios espaciais.
-                    Assim, em 1976, a patente passou a ser de domínio público, o que abriu espaço para a utilização da espuma viscoelástica de poliuretano ser usada para fabricar travesseiros, colchões e acessórios esportivos.
+                    O que nem todos sabem é que a NASA, embora tenha realmente feito parte dessa descoberta, jamais
+                    utilizou essa tecnologia espacial em suas missões.
+                    Essa história aconteceu em 1966, quando a agência espacial americana buscava desenvolver um material
+                    que se moldasse ao corpo dos astronautas.
+                    Foi então que os pesquisadores Charles Yost e Charles Kubokawa, contratados pela NASA, desenvolveram
+                    uma espuma com elevada dissipação de energia, chamada viscoelástica.
+                    A ideia era que ela fosse um material utilizado nos assentos das naves e que servisse como
+                    amortecedor para eventuais impactos.
+                    O projeto acabou engavetado, mas felizmente os dois Charles perceberam que o material tinha
+                    potencial para ser comercializado fora dos domínios espaciais.
+                    Assim, em 1976, a patente passou a ser de domínio público, o que abriu espaço para a utilização da
+                    espuma viscoelástica de poliuretano ser usada para fabricar travesseiros, colchões e acessórios
+                    esportivos.
                 </p>
                 <p>
                     Um dos possíveis contratempos que um astronauta pode ter que enfrentar no espaço são os impactos.
                     Sem gravidade, qualquer objeto pode se tornar uma arma, já que, no vácuo, o movimento nunca cessa.
-                    Em razão disso, a NASA está sempre em busca de novos materiais que ajudem a absorver impactos, a exemplo do viscoelástico.
-                    Entre esses materiais, está a borracha usada como forro do capacete dos astronautas que, por causa da sua grande capacidade de amortecimento, passou a ser usada na fabricação de solas de tênis de corrida.
+                    Em razão disso, a NASA está sempre em busca de novos materiais que ajudem a absorver impactos, a
+                    exemplo do viscoelástico.
+                    Entre esses materiais, está a borracha usada como forro do capacete dos astronautas que, por causa
+                    da sua grande capacidade de amortecimento, passou a ser usada na fabricação de solas de tênis de
+                    corrida.
                 </p>
             </section>
             <aside class="col list-topics">
@@ -213,13 +254,18 @@
             <div class="col-2">
                 <div class="img-radius">
                     <div class="img-autor">
-                    <img src="Arquivos/imagens/img-autor.png" alt="retrato-de-uma jovem bonita em pe na parede cinza">
+                        <img src="Arquivos/imagens/img-autor.png"
+                            alt="retrato-de-uma jovem bonita em pe na parede cinza">
                     </div>
                 </div>
             </div>
             <div class="col-7 text-justify description-autor">
                 <h5>xxxxxxxxxxxxxx</h5>
-                <p>Integer congue turpis ultricies orci accumsan, non cursus tortor pharetra. Quisque arcu purus, mattis non augue accumsan, scelerisque malesuada massa. Quisque a purus elit. Nulla scelerisque lacus vel nunc auctor, eu aliquet velit dictum. Nullam sed risus dui. Nulla tincidunt luctus tellus, quis vehicula est porta et. Sed vel porta ligula, ut auctor eros. Fusce vel consequat eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius sem in ornare scelerisque.</p>
+                <p>Integer congue turpis ultricies orci accumsan, non cursus tortor pharetra. Quisque arcu purus, mattis
+                    non augue accumsan, scelerisque malesuada massa. Quisque a purus elit. Nulla scelerisque lacus vel
+                    nunc auctor, eu aliquet velit dictum. Nullam sed risus dui. Nulla tincidunt luctus tellus, quis
+                    vehicula est porta et. Sed vel porta ligula, ut auctor eros. Fusce vel consequat eros. Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit. Sed varius sem in ornare scelerisque.</p>
                 <h5>Mais deste autor</h5>
                 <p class="mb-1">Cras vel fringilla odio</p>
                 <p class="mb-1">Nullam nec augue non risus pulvinar gravida</p>
@@ -228,8 +274,25 @@
         </section>
         <h2 class="wrapper text-center">Comentários</h2>
         <section id="comments">
-            
+
         </section>
     </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/validuser.js"></script>
 </body>
+
 </html>
