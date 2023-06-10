@@ -1,7 +1,16 @@
-# PortalSenhaForte
-Projeto do Eixo 03 do curso de Sistema de Informaçao da PUC Minas
+<div align="center">
 
-## Alunos integrantes da equipe
+<h1>Portal SenhaForte</h1>
+
+<h3>Pontifícia Universidade Católica de Minas Gerais</h3>
+
+Sistemas de Informação
+
+Projeto - Design Centrado no Usuário | 3º Semestre 
+  
+<div align="justify">
+
+### Alunos integrantes da equipe
 
 * Allan Nascimento
 * Caio Ignatz
@@ -11,6 +20,6 @@ Projeto do Eixo 03 do curso de Sistema de Informaçao da PUC Minas
 * Rafael augusto
 
 
-## Professor orientador
+### Professor orientador
 
 * Fábio Martins de Oliveira
