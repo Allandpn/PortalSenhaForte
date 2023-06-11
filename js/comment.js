@@ -4,9 +4,14 @@
 
 // retorna nome do usuario logado
 const userName = () => {
-    const user = JSON.parse(localStorage.getItem("db_user")) ?? []
-	const name = user[0].usuario
-	console.log("teste")
+    const user = JSON.parse(localStorage.getItem("db_user"))
+	let name
+	if(!user) {
+		name = "Anônimo"
+	} else {
+		name = user[0].usuario
+	}	
+	
 	return name
 }
 
